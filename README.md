@@ -8,3 +8,6 @@
 - [x] **Multi-Client support** (for FS or Leecher :wink:)
 - [x] Open-Source (safe & secure)
 - [x] Legal (Terms of Service approved)
+
+**YouTube - FlyffDroid - Multi-Client Demo**
+[![YouTube](http://img.youtube.com/vi/bY8VQP32aOA/0.jpg)](http://www.youtube.com/watch?v=bY8VQP32aOA "FlyffDroid - Multi-Client Demo")
