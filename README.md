@@ -6,3 +6,5 @@
 - [x] Lightweight (less RAM usage)
 - [X] Native Android app (no browser shortcut)
 - [x] **Multi-Client support** (for FS or Leecher :wink:)
+- [x] Open-Source (safe & secure)
+- [x] Legal (Terms of Service approved)
