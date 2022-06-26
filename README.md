@@ -1,6 +1,6 @@
 # ![Logo](https://imguploader.de/images/2022/06/26/ic_launcher5acc11c4a97b1049.png) FlyffDroid
 
-**FlyffDroid** is a lightweight application to play Flyff Universe on Android.
+**FlyffDroid** is a lightweight application to play Flyff Universe on Android with Multi-Client support.
 
 
 ### Features
