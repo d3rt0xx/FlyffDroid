@@ -17,7 +17,7 @@ Built with Gradle*
 - [x] Legal ([Terms of Service](https://galalab.helpshift.com/a/flyff-universe/?p=all&s=tos-privacy-policy&f=terms-of-service&l=en) approved)
 
 
-## # ToDo (Work in Progress)
+## # ToDo's
 
 - [ ] Auto-Updater
 - [ ] Gesture controls (swipe between clients)
