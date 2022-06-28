@@ -31,6 +31,7 @@ Built with Gradle
 
 ### # Credits
 
+Gala Lab for [Flyff Universe](https://universe.flyff.com)  
 ils94 for [FlyffUWebViewClient](https://github.com/ils94/FlyffUWebViewClient)  
 Sinnefa for [Android-Webview-Based-App-Template](https://github.com/Sinnefa/Android-Webview-Based-App-Template)  
 [Stutenkerl](https://github.com/Stutenkerl) for testing
