@@ -26,3 +26,9 @@ Built with Gradle
 ### # YouTube - FlyffDroid - Multi-Client Demo
 
 [![YouTube](https://img.youtube.com/vi/bY8VQP32aOA/0.jpg)](https://www.youtube.com/watch?v=bY8VQP32aOA "FlyffDroid - Multi-Client Demo")
+
+
+### # Credits
+
+ils94 for [FlyffUWebViewClient](https://github.com/ils94/FlyffUWebViewClient)  
+Sinnefa for [WebView template](https://github.com/Sinnefa/Android-Webview-Based-App-Template)
