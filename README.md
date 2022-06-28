@@ -2,9 +2,9 @@
 
 **FlyffDroid** is a lightweight application to play Flyff Universe on Android with Multi-Client support.
 
-Written in Java  
+*Written in Java  
 Created with Android Studio  
-Built with Gradle
+Built with Gradle*
 
 
 ### # Features
