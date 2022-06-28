@@ -7,7 +7,7 @@ Created with Android Studio
 Built with Gradle*
 
 
-### # Features
+## # Features
 
 - [x] Lightweight (less RAM usage)
 - [X] Native Android app (no browser shortcut)
@@ -17,7 +17,7 @@ Built with Gradle*
 - [x] Legal ([Terms of Service](https://galalab.helpshift.com/a/flyff-universe/?p=all&s=tos-privacy-policy&f=terms-of-service&l=en) approved)
 
 
-### # ToDo (Work in Progress)
+## # ToDo (Work in Progress)
 
 - [ ] Auto-Updater
 - [ ] Gesture controls (swipe between clients)
@@ -25,18 +25,18 @@ Built with Gradle*
 - [ ] Translations for different languages
 
 
-### # Screenshots - Single-Client / Multi-Client
+## # Screenshots - Single-Client / Multi-Client
 
 ![Screenshot](https://imguploader.de/images/2022/06/28/single.png)  
 ![Screenshot](https://imguploader.de/images/2022/06/28/multi.png)
 
 
-### # YouTube - Multi-Client Demo
+## # YouTube - Multi-Client Demo
 
 [![YouTube](https://imguploader.de/images/2022/06/28/video.png)](https://www.youtube.com/watch?v=bY8VQP32aOA "FlyffDroid - Multi-Client Demo")
 
 
-### # Credits
+## # Credits
 
 Gala Lab for [Flyff Universe](https://universe.flyff.com)  
 ils94 for [FlyffUWebViewClient](https://github.com/ils94/FlyffUWebViewClient)  
