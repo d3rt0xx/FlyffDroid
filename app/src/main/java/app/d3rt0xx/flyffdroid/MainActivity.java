@@ -37,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
     Menu optionMenu;
 
     String url = "https://universe.flyff.com/play";
+    String news = "https://universe.flyff.com/news";
+    String flyffipedia = "https://flyffipedia.com";
+    String flyffulator = "https://flyffulator.com";
+    String skillulator = "https://skillulator.com";
+    String flyffdroid = "https://github.com/d3rt0xx/FlyffDroid";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -217,6 +222,36 @@ public class MainActivity extends AppCompatActivity {
             case R.id.rotation:
 
                 lockUnlockRotation();
+
+                break;
+
+            case R.id.news:
+
+                mClientWebView.loadUrl(news);
+
+                break;
+
+            case R.id.flyffipedia:
+
+                mClientWebView.loadUrl(flyffipedia);
+
+                break;
+
+            case R.id.flyffulator:
+
+                mClientWebView.loadUrl(flyffulator);
+
+                break;
+
+            case R.id.skillulator:
+
+                mClientWebView.loadUrl(skillulator);
+
+                break;
+
+            case R.id.flyffdroid:
+
+                mClientWebView.loadUrl(flyffdroid);
 
                 break;
         }
