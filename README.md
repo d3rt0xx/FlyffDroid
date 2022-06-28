@@ -12,6 +12,7 @@ Built with Gradle
 - [x] Lightweight (less RAM usage)
 - [X] Native Android app (no browser shortcut)
 - [x] **Multi-Client support** (for FS or Leecher :wink:)
+- [x] Built-in community tools
 - [x] Open-Source (safe & secure)
 - [x] Legal ([Terms of Service](https://galalab.helpshift.com/a/flyff-universe/?p=all&s=tos-privacy-policy&f=terms-of-service&l=en) approved)
 
