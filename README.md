@@ -25,9 +25,15 @@ Built with Gradle
 - [ ] Translations for different languages
 
 
-### # YouTube - FlyffDroid - Multi-Client Demo
+### # Screenshots - Single-Client / Multi-Client
 
-[![YouTube](https://img.youtube.com/vi/bY8VQP32aOA/0.jpg)](https://www.youtube.com/watch?v=bY8VQP32aOA "FlyffDroid - Multi-Client Demo")
+![Screenshot](https://imguploader.de/images/2022/06/28/single.png)  
+![Screenshot](https://imguploader.de/images/2022/06/28/multi.png)
+
+
+### # YouTube - Multi-Client Demo
+
+[![YouTube](https://imguploader.de/images/2022/06/28/video.png)](https://www.youtube.com/watch?v=bY8VQP32aOA "FlyffDroid - Multi-Client Demo")
 
 
 ### # Credits
