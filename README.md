@@ -13,7 +13,7 @@ Built with Gradle
 - [X] Native Android app (no browser shortcut)
 - [x] **Multi-Client support** (for FS or Leecher :wink:)
 - [x] Open-Source (safe & secure)
-- [x] Legal (Terms of Service approved)
+- [x] Legal ([Terms of Service](https://galalab.helpshift.com/a/flyff-universe/?p=all&s=tos-privacy-policy&f=terms-of-service&l=en) approved)
 
 
 ### # ToDo (Work in Progress)
