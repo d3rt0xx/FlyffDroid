@@ -23,7 +23,6 @@ Built with Gradle*
 - [ ] Gesture controls (swipe between clients)
 - [ ] Multiple profiles
 - [ ] Built-in leveling guide
-- [ ] Easier Client switching
 - [ ] Translations for different languages
 
 
