@@ -61,7 +61,7 @@
         android:title="Lock Auto-Rotation" />
 
     <item
-        android:title="More..."
+        android:title="Tools"
         tools:ignore="HardcodedText">
 
         <menu>
