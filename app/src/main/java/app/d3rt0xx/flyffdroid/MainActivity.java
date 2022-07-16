@@ -24,24 +24,19 @@ import android.widget.Toast;
 
 import java.util.Objects;
 
+import app.d3rt0xx.flyffdroid.constants.Websites;
+
 public class MainActivity extends AppCompatActivity {
 
-    WebView mClientWebView, sClientWebView;
-    FrameLayout mClient, sClient;
-    LinearLayout linearLayout;
-    Boolean exit = false, isOpen = false;
-    TinyDB tinyDB;
+    private WebView mClientWebView, sClientWebView;
+    private FrameLayout mClient, sClient;
+    private LinearLayout linearLayout;
+    private Boolean exit = false, isOpen = false;
+    private TinyDB tinyDB;
 
     String rotationlock = "unlocked";
 
     Menu optionMenu;
-
-    String url = "https://universe.flyff.com/play";
-    String news = "https://universe.flyff.com/news";
-    String flyffipedia = "https://flyffipedia.com";
-    String flyffulator = "https://flyffulator.com";
-    String skillulator = "https://skillulator.com";
-    String flyffdroid = "https://github.com/d3rt0xx/FlyffDroid";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,8 +63,9 @@ public class MainActivity extends AppCompatActivity {
         mainClient();
 
         if (savedInstanceState == null) {
-            mClientWebView.loadUrl(url);
-            sClientWebView.loadUrl(url);
+            String gameStage = Websites.GAME.getUrl();
+            mClientWebView.loadUrl(gameStage);
+            sClientWebView.loadUrl(gameStage);
         }
     }
 
@@ -99,448 +95,132 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-
             case R.id.secondClient:
-
-                if (sClient.getVisibility() == View.GONE && !isOpen) {
-
-                    sClient.setVisibility(View.VISIBLE);
-
-                    secondClient();
-
-                    optionMenu.findItem(R.id.secondClient).setTitle("Close Second Client");
-
-                    optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(true);
-
-                    optionMenu.findItem(R.id.minimizeMainClient).setEnabled(true);
-
-                    optionMenu.findItem(R.id.reloadSecondClient).setEnabled(true);
-
-                    isOpen = true;
-                } else {
-
-                    AlertDialog dialog = new AlertDialog.Builder(this)
-                            .setCancelable(false)
-                            .setTitle("Close Second Client?")
-                            .setPositiveButton("Yes", null)
-                            .setNegativeButton("Nope", null)
-                            .show();
-
-                    Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
-
-                    positiveButton.setOnClickListener(v -> {
-
-                        sClient.removeAllViews();
-
-                        sClientWebView.loadUrl("about:blank");
-
-                        sClient.setVisibility(View.GONE);
-
-                        optionMenu.findItem(R.id.secondClient).setTitle("Open Second Client");
-
-                        optionMenu.findItem(R.id.minimizeSecondClient).setTitle("Minimize Second Client");
-
-                        optionMenu.findItem(R.id.minimizeMainClient).setTitle("Minimize Main Client");
-
-                        optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(false);
-
-                        optionMenu.findItem(R.id.minimizeMainClient).setEnabled(false);
-
-                        optionMenu.findItem(R.id.reloadSecondClient).setEnabled(false);
-
-                        if (mClient.getVisibility() == View.GONE) {
-
-                            mClient.setVisibility(View.VISIBLE);
-                        }
-
-                        isOpen = false;
-
-                        dialog.dismiss();
-                    });
-                }
-
+                toggleSecondClient();
                 break;
-
             case R.id.minimizeSecondClient:
-
-                if (sClient.getVisibility() == View.VISIBLE) {
-
-                    sClient.setVisibility(View.GONE);
-
-                    optionMenu.findItem(R.id.minimizeSecondClient).setTitle("Maximize Second Client");
-
-                    optionMenu.findItem(R.id.minimizeMainClient).setEnabled(false);
-                } else {
-
-                    sClient.setVisibility(View.VISIBLE);
-
-                    optionMenu.findItem(R.id.minimizeSecondClient).setTitle("Minimize Second Client");
-
-                    optionMenu.findItem(R.id.minimizeMainClient).setEnabled(true);
-                }
-
+                minimizeWindow(sClient, R.id.minimizeSecondClient, getResources().getString(R.string.maximize_second_client), R.id.minimizeMainClient, getResources().getString(R.string.minimize_second_client));
                 break;
-
             case R.id.minimizeMainClient:
-
-                if (mClient.getVisibility() == View.VISIBLE) {
-
-                    mClient.setVisibility(View.GONE);
-
-                    optionMenu.findItem(R.id.minimizeMainClient).setTitle("Maximize Main Client");
-
-                    optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(false);
-                } else {
-
-                    mClient.setVisibility(View.VISIBLE);
-
-                    optionMenu.findItem(R.id.minimizeMainClient).setTitle("Minimize Main Client");
-
-                    optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(true);
-                }
-
+                minimizeWindow(mClient, R.id.minimizeMainClient, getResources().getString(R.string.maximize_main_client), R.id.minimizeSecondClient, getResources().getString(R.string.minimize_main_client));
                 break;
-
             case R.id.reloadMainClient:
-
-                mClientWebView.loadUrl(url);
-
+                mClientWebView.loadUrl(Websites.GAME.getUrl());
                 break;
-
             case R.id.reloadSecondClient:
-
-                sClientWebView.loadUrl(url);
-
+                sClientWebView.loadUrl(Websites.GAME.getUrl());
                 break;
-
             case R.id.fullScreen:
-
                 fullScreenOn();
-
                 break;
-
             case R.id.rotation:
-
                 lockUnlockRotation();
-
                 break;
-
             case R.id.news:
-
-                if (sClient.getVisibility() == View.GONE && !isOpen) {
-
-                    sClient.setVisibility(View.VISIBLE);
-
-                    secondClient();
-
-                    optionMenu.findItem(R.id.secondClient).setTitle("Close Second Client");
-
-                    optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(true);
-
-                    optionMenu.findItem(R.id.minimizeMainClient).setEnabled(true);
-
-                    optionMenu.findItem(R.id.reloadSecondClient).setEnabled(true);
-
-                    isOpen = true;
-                } else {
-
-                    AlertDialog dialog = new AlertDialog.Builder(this)
-                            .setCancelable(false)
-                            .setTitle("Close Second Client?")
-                            .setPositiveButton("Yes", null)
-                            .setNegativeButton("Nope", null)
-                            .show();
-
-                    Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
-
-                    positiveButton.setOnClickListener(v -> {
-
-                        sClient.removeAllViews();
-
-                        sClientWebView.loadUrl("about:blank");
-
-                        sClient.setVisibility(View.GONE);
-
-                        optionMenu.findItem(R.id.secondClient).setTitle("Open Second Client");
-
-                        optionMenu.findItem(R.id.minimizeSecondClient).setTitle("Minimize Second Client");
-
-                        optionMenu.findItem(R.id.minimizeMainClient).setTitle("Minimize Main Client");
-
-                        optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(false);
-
-                        optionMenu.findItem(R.id.minimizeMainClient).setEnabled(false);
-
-                        optionMenu.findItem(R.id.reloadSecondClient).setEnabled(false);
-
-                        if (mClient.getVisibility() == View.GONE) {
-
-                            mClient.setVisibility(View.VISIBLE);
-                        }
-
-                        isOpen = false;
-
-                        dialog.dismiss();
-                    });
-                }
-
-                sClientWebView.loadUrl(news);
-
+                loadSecondClientWithUrl(Websites.NEWS);
                 break;
-
             case R.id.flyffipedia:
-
-                if (sClient.getVisibility() == View.GONE && !isOpen) {
-
-                    sClient.setVisibility(View.VISIBLE);
-
-                    secondClient();
-
-                    optionMenu.findItem(R.id.secondClient).setTitle("Close Second Client");
-
-                    optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(true);
-
-                    optionMenu.findItem(R.id.minimizeMainClient).setEnabled(true);
-
-                    optionMenu.findItem(R.id.reloadSecondClient).setEnabled(true);
-
-                    isOpen = true;
-                } else {
-
-                    AlertDialog dialog = new AlertDialog.Builder(this)
-                            .setCancelable(false)
-                            .setTitle("Close Second Client?")
-                            .setPositiveButton("Yes", null)
-                            .setNegativeButton("Nope", null)
-                            .show();
-
-                    Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
-
-                    positiveButton.setOnClickListener(v -> {
-
-                        sClient.removeAllViews();
-
-                        sClientWebView.loadUrl("about:blank");
-
-                        sClient.setVisibility(View.GONE);
-
-                        optionMenu.findItem(R.id.secondClient).setTitle("Open Second Client");
-
-                        optionMenu.findItem(R.id.minimizeSecondClient).setTitle("Minimize Second Client");
-
-                        optionMenu.findItem(R.id.minimizeMainClient).setTitle("Minimize Main Client");
-
-                        optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(false);
-
-                        optionMenu.findItem(R.id.minimizeMainClient).setEnabled(false);
-
-                        optionMenu.findItem(R.id.reloadSecondClient).setEnabled(false);
-
-                        if (mClient.getVisibility() == View.GONE) {
-
-                            mClient.setVisibility(View.VISIBLE);
-                        }
-
-                        isOpen = false;
-
-                        dialog.dismiss();
-                    });
-                }
-
-                sClientWebView.loadUrl(flyffipedia);
-
+                loadSecondClientWithUrl(Websites.FLYFFIPEDIA);
                 break;
-
             case R.id.flyffulator:
-
-                if (sClient.getVisibility() == View.GONE && !isOpen) {
-
-                    sClient.setVisibility(View.VISIBLE);
-
-                    secondClient();
-
-                    optionMenu.findItem(R.id.secondClient).setTitle("Close Second Client");
-
-                    optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(true);
-
-                    optionMenu.findItem(R.id.minimizeMainClient).setEnabled(true);
-
-                    optionMenu.findItem(R.id.reloadSecondClient).setEnabled(true);
-
-                    isOpen = true;
-                } else {
-
-                    AlertDialog dialog = new AlertDialog.Builder(this)
-                            .setCancelable(false)
-                            .setTitle("Close Second Client?")
-                            .setPositiveButton("Yes", null)
-                            .setNegativeButton("Nope", null)
-                            .show();
-
-                    Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
-
-                    positiveButton.setOnClickListener(v -> {
-
-                        sClient.removeAllViews();
-
-                        sClientWebView.loadUrl("about:blank");
-
-                        sClient.setVisibility(View.GONE);
-
-                        optionMenu.findItem(R.id.secondClient).setTitle("Open Second Client");
-
-                        optionMenu.findItem(R.id.minimizeSecondClient).setTitle("Minimize Second Client");
-
-                        optionMenu.findItem(R.id.minimizeMainClient).setTitle("Minimize Main Client");
-
-                        optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(false);
-
-                        optionMenu.findItem(R.id.minimizeMainClient).setEnabled(false);
-
-                        optionMenu.findItem(R.id.reloadSecondClient).setEnabled(false);
-
-                        if (mClient.getVisibility() == View.GONE) {
-
-                            mClient.setVisibility(View.VISIBLE);
-                        }
-
-                        isOpen = false;
-
-                        dialog.dismiss();
-                    });
-                }
-
-                sClientWebView.loadUrl(flyffulator);
-
+                loadSecondClientWithUrl(Websites.FLYFFULATOR);
                 break;
-
             case R.id.skillulator:
-
-                if (sClient.getVisibility() == View.GONE && !isOpen) {
-
-                    sClient.setVisibility(View.VISIBLE);
-
-                    secondClient();
-
-                    optionMenu.findItem(R.id.secondClient).setTitle("Close Second Client");
-
-                    optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(true);
-
-                    optionMenu.findItem(R.id.minimizeMainClient).setEnabled(true);
-
-                    optionMenu.findItem(R.id.reloadSecondClient).setEnabled(true);
-
-                    isOpen = true;
-                } else {
-
-                    AlertDialog dialog = new AlertDialog.Builder(this)
-                            .setCancelable(false)
-                            .setTitle("Close Second Client?")
-                            .setPositiveButton("Yes", null)
-                            .setNegativeButton("Nope", null)
-                            .show();
-
-                    Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
-
-                    positiveButton.setOnClickListener(v -> {
-
-                        sClient.removeAllViews();
-
-                        sClientWebView.loadUrl("about:blank");
-
-                        sClient.setVisibility(View.GONE);
-
-                        optionMenu.findItem(R.id.secondClient).setTitle("Open Second Client");
-
-                        optionMenu.findItem(R.id.minimizeSecondClient).setTitle("Minimize Second Client");
-
-                        optionMenu.findItem(R.id.minimizeMainClient).setTitle("Minimize Main Client");
-
-                        optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(false);
-
-                        optionMenu.findItem(R.id.minimizeMainClient).setEnabled(false);
-
-                        optionMenu.findItem(R.id.reloadSecondClient).setEnabled(false);
-
-                        if (mClient.getVisibility() == View.GONE) {
-
-                            mClient.setVisibility(View.VISIBLE);
-                        }
-
-                        isOpen = false;
-
-                        dialog.dismiss();
-                    });
-                }
-
-                sClientWebView.loadUrl(skillulator);
-
+                loadSecondClientWithUrl(Websites.SKILLULATOR);
                 break;
-
             case R.id.flyffdroid:
-
-                if (sClient.getVisibility() == View.GONE && !isOpen) {
-
-                    sClient.setVisibility(View.VISIBLE);
-
-                    secondClient();
-
-                    optionMenu.findItem(R.id.secondClient).setTitle("Close Second Client");
-
-                    optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(true);
-
-                    optionMenu.findItem(R.id.minimizeMainClient).setEnabled(true);
-
-                    optionMenu.findItem(R.id.reloadSecondClient).setEnabled(true);
-
-                    isOpen = true;
-                } else {
-
-                    AlertDialog dialog = new AlertDialog.Builder(this)
-                            .setCancelable(false)
-                            .setTitle("Close Second Client?")
-                            .setPositiveButton("Yes", null)
-                            .setNegativeButton("Nope", null)
-                            .show();
-
-                    Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
-
-                    positiveButton.setOnClickListener(v -> {
-
-                        sClient.removeAllViews();
-
-                        sClientWebView.loadUrl("about:blank");
-
-                        sClient.setVisibility(View.GONE);
-
-                        optionMenu.findItem(R.id.secondClient).setTitle("Open Second Client");
-
-                        optionMenu.findItem(R.id.minimizeSecondClient).setTitle("Minimize Second Client");
-
-                        optionMenu.findItem(R.id.minimizeMainClient).setTitle("Minimize Main Client");
-
-                        optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(false);
-
-                        optionMenu.findItem(R.id.minimizeMainClient).setEnabled(false);
-
-                        optionMenu.findItem(R.id.reloadSecondClient).setEnabled(false);
-
-                        if (mClient.getVisibility() == View.GONE) {
-
-                            mClient.setVisibility(View.VISIBLE);
-                        }
-
-                        isOpen = false;
-
-                        dialog.dismiss();
-                    });
-                }
-
-                sClientWebView.loadUrl(flyffdroid);
-
+                loadSecondClientWithUrl(Websites.FLYFFDROID);
                 break;
+
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void toggleSecondClient() {
+        if (sClient.getVisibility() == View.GONE && !isOpen) {
+            changeSecondClientToVisible();
+        } else {
+            closeSecondClient();
+        }
+    }
+
+    private void minimizeWindow(FrameLayout mClient, int minimizeItemId, String toggle1Text, int maximizeItemId, String toggle2Text) {
+        if (mClient.getVisibility() == View.VISIBLE) {
+            changeClientWindowVisibility(mClient, View.GONE, minimizeItemId, toggle1Text, maximizeItemId, false);
+        } else {
+            changeClientWindowVisibility(mClient, View.VISIBLE, minimizeItemId, toggle2Text, maximizeItemId, true);
+        }
+
+    }
+
+    private void loadSecondClientWithUrl(Websites flyffipedia) {
+        toggleSecondClient();
+        sClientWebView.loadUrl(flyffipedia.getUrl());
+    }
+
+    private void closeSecondClient() {
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setCancelable(false)
+                .setTitle(getResources().getString(R.string.close_second_client_question))
+                .setPositiveButton(getResources().getString(R.string.yes), null)
+                .setNegativeButton(getResources().getString(R.string.no), null)
+                .show();
+
+        Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+
+        positiveButton.setOnClickListener(v -> {
+
+            sClient.removeAllViews();
+
+            sClientWebView.loadUrl("about:blank");
+
+            sClient.setVisibility(View.GONE);
+
+            optionMenu.findItem(R.id.secondClient).setTitle(getResources().getString(R.string.open_second_client));
+
+            optionMenu.findItem(R.id.minimizeSecondClient).setTitle(getResources().getString(R.string.minimize_second_client));
+
+            optionMenu.findItem(R.id.minimizeMainClient).setTitle(getResources().getString(R.string.minimize_main_client));
+
+            optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(false);
+
+            optionMenu.findItem(R.id.minimizeMainClient).setEnabled(false);
+
+            optionMenu.findItem(R.id.reloadSecondClient).setEnabled(false);
+
+            if (mClient.getVisibility() == View.GONE) {
+
+                mClient.setVisibility(View.VISIBLE);
+            }
+
+            isOpen = false;
+
+            dialog.dismiss();
+        });
+    }
+
+    private void changeSecondClientToVisible() {
+        sClient.setVisibility(View.VISIBLE);
+
+        secondClient();
+
+        optionMenu.findItem(R.id.secondClient).setTitle(getResources().getString(R.string.close_second_client));
+
+        optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(true);
+
+        optionMenu.findItem(R.id.minimizeMainClient).setEnabled(true);
+
+        optionMenu.findItem(R.id.reloadSecondClient).setEnabled(true);
+
+        isOpen = true;
+    }
+
+    private void changeClientWindowVisibility(FrameLayout frame, int visibilty, int titleItem, String titleText, int elementId, boolean isEnabled) {
+        frame.setVisibility(visibilty);
+
+        optionMenu.findItem(titleItem).setTitle(titleText);
+
+        optionMenu.findItem(elementId).setEnabled(isEnabled);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -584,62 +264,63 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void lockUnlockRotation() {
+        String unlocked = "unlocked";
+        String locked = "locked";
 
-        if (rotationlock.equals("unlocked")) {
+        if (rotationlock.equals(unlocked)) {
+            changeLock(locked, R.string.locked_auto_rotation, R.string.unlock_auto_rotation, ActivityInfo.SCREEN_ORIENTATION_LOCKED);
+        } else if (rotationlock.equals(locked)) {
 
-            rotationlock = "locked";
-
-            Toast.makeText(this, "Locked Auto-Rotation", Toast.LENGTH_SHORT).show();
-
-            optionMenu.findItem(R.id.rotation).setTitle("Unlock Auto-Rotation");
-
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
-
-        } else if (rotationlock.equals("locked")) {
-
-            rotationlock = "unlocked";
-
-            Toast.makeText(this, "Unlocked Auto-Rotation", Toast.LENGTH_SHORT).show();
-
-            optionMenu.findItem(R.id.rotation).setTitle("Lock Auto-Rotation");
-
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+            changeLock(unlocked, R.string.unlocked_auto_rotation, R.string.lock_auto_rotation, ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
         }
 
-        tinyDB.remove("rotation");
-        tinyDB.putString("rotation", rotationlock);
+        String rotation = "rotation";
+        tinyDB.remove(rotation);
+        tinyDB.putString(rotation, rotationlock);
+    }
+
+    private void changeLock(String locked, int actionText, int newText, int screenOrientationLocked) {
+        rotationlock = locked;
+
+        Toast.makeText(this, getResources().getString(actionText), Toast.LENGTH_SHORT).show();
+
+        optionMenu.findItem(R.id.rotation).setTitle(getResources().getString(newText));
+
+        setRequestedOrientation(screenOrientationLocked);
     }
 
     @SuppressLint("SourceLockedOrientationActivity")
     private void loadRotationConfig() {
 
-        if (!tinyDB.getString("orientation").equals("")) {
+        String orientation = "orientation";
+        if (!tinyDB.getString(orientation).equals("")) {
 
-            if (tinyDB.getString("orientation").equals("landscape")) {
+            if (tinyDB.getString(orientation).equals("landscape")) {
 
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
                 linearLayout.setOrientation(LinearLayout.HORIZONTAL);
 
-            } else if (tinyDB.getString("orientation").equals("portrait")) {
+            } else if (tinyDB.getString(orientation).equals("portrait")) {
 
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                 linearLayout.setOrientation(LinearLayout.VERTICAL);
             }
         }
 
-        if (!tinyDB.getString("rotation").equals("")) {
+        String rotation = "rotation";
+        if (!tinyDB.getString(rotation).equals("")) {
 
-            rotationlock = tinyDB.getString("rotation");
+            rotationlock = tinyDB.getString(rotation);
 
             if (rotationlock.equals("locked")) {
 
-                optionMenu.findItem(R.id.rotation).setTitle("Unlock Auto-Rotation");
+                optionMenu.findItem(R.id.rotation).setTitle(getResources().getString(R.string.unlock_auto_rotation));
 
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
 
             } else if (rotationlock.equals("unlocked")) {
 
-                optionMenu.findItem(R.id.rotation).setTitle("Lock Auto-Rotation");
+                optionMenu.findItem(R.id.rotation).setTitle(getResources().getString(R.string.lock_auto_rotation));
 
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
             }
@@ -674,9 +355,9 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptCanOpenWindowsAutomatically(false);
         webSettings.setUseWideViewPort(true);
         webSettings.setLoadWithOverviewMode(true);
-        webSettings.setUserAgentString("FlyffDroid");
+        webSettings.setUserAgentString(getResources().getString(R.string.app_name));
 
-        webView.loadUrl(url);
+        webView.loadUrl(Websites.GAME.getUrl());
     }
 
     @Override
@@ -697,17 +378,18 @@ public class MainActivity extends AppCompatActivity {
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
 
-        tinyDB.remove("orientation");
+        String orientation = "orientation";
+        tinyDB.remove(orientation);
 
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
 
-            tinyDB.putString("orientation", "landscape");
+            tinyDB.putString(orientation, "landscape");
 
             linearLayout.setOrientation(LinearLayout.HORIZONTAL);
 
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
 
-            tinyDB.putString("orientation", "portrait");
+            tinyDB.putString(orientation, "portrait");
 
             linearLayout.setOrientation(LinearLayout.VERTICAL);
         }

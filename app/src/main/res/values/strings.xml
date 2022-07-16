@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FlyffDroid</string>
+    <string name="app_name" translatable="false">FlyffDroid</string>
+    <string name="unlock_auto_rotation" translatable="true">Unlock Auto-Rotation</string>
+    <string name="lock_auto_rotation" translatable="true">Lock Auto-Rotation</string>
+    <string name="locked_auto_rotation" translatable="true">Locked Auto-Rotation</string>
+    <string name="unlocked_auto_rotation" translatable="true">Unlocked Auto-Rotation</string>
+    <string name="open_second_client" translatable="true">Open Second Client</string>
+    <string name="close_second_client" translatable="true">Close Second Client</string>
+    <string name="close_second_client_question" translatable="true">Close Second Client?</string>
+    <string name="minimize_main_client" translatable="true">Minimize Main Client</string>
+    <string name="minimize_second_client" translatable="true">Minimize Second Client</string>
+    <string name="maximize_main_client" translatable="true">Maximize Main Client</string>
+    <string name="maximize_second_client" translatable="true">Maximize Second Client</string>
+    <string name="yes" translatable="true">Yes</string>
+    <string name="no" translatable="true">No</string>
+
 </resources>
