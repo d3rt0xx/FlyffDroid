@@ -14,7 +14,7 @@ Built with Gradle*
 - [x] **Multi-Client support** (for FS or Leecher :wink:)
 - [x] Built-in community tools
 - [x] Open-Source (safe & secure)
-- [x] Legal ([Terms of Service](https://galalab.helpshift.com/a/flyff-universe/?p=all&s=tos-privacy-policy&f=terms-of-service&l=en) approved)
+- [x] Legal ([Terms of Service](https://galalab.helpshift.com/a/flyff-universe/?s=tos-privacy-policy&f=terms-of-service&l=en&p=all) approved)
 
 
 ## # ToDo's
