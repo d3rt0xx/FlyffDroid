@@ -128,6 +128,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.skillulator:
                 loadSecondClientWithUrl(Websites.SKILLULATOR);
                 break;
+            case R.id.madrigalmaps:
+                loadSecondClientWithUrl(Websites.MADRIGALMAPS);
+                break;
             case R.id.flyffdroid:
                 loadSecondClientWithUrl(Websites.FLYFFDROID);
                 break;
