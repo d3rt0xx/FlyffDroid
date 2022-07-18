@@ -41,4 +41,4 @@ Built with Gradle*
 
 - Gala Lab for [Flyff Universe](https://universe.flyff.com)  
 - Sinnefa for [Android-Webview-Based-App-Template](https://github.com/Sinnefa/Android-Webview-Based-App-Template)  
-- ils94 for [FlyffUAndroid](https://github.com/ils94/FlyffUWebViewClient)
+- ils94 for [FlyffUAndroid](https://github.com/ils94/FlyffUAndroid)
