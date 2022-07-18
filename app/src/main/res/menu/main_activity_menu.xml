@@ -87,6 +87,11 @@
                 tools:ignore="HardcodedText" />
 
             <item
+                android:id="@+id/madrigalmaps"
+                android:title="Madrigal Maps"
+                tools:ignore="HardcodedText" />
+
+            <item
                 android:id="@+id/flyffdroid"
                 android:title="FlyffDroid"
                 tools:ignore="HardcodedText" />
