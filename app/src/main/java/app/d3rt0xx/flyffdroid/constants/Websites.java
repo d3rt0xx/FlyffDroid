@@ -7,6 +7,7 @@ public enum Websites {
     FLYFFIPEDIA("https://flyffipedia.com"),
     FLYFFULATOR("https://flyffulator.com"),
     SKILLULATOR("https://skillulator.com"),
+    MADRIGALMAPS("https://www.madrigalmaps.com"),
     FLYFFDROID("https://github.com/d3rt0xx/FlyffDroid");
 
     private final String url;
