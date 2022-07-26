@@ -37,8 +37,6 @@ Built with Gradle*
 [![YouTube](https://imguploader.de/images/2022/06/28/video.png)](https://www.youtube.com/watch?v=bY8VQP32aOA "FlyffDroid - Multi-Client Demo")
 
 
-## # Credits
+## # Disclaimer
 
-- Gala Lab for [Flyff Universe](https://universe.flyff.com)  
-- Sinnefa for [Android-Webview-Based-App-Template](https://github.com/Sinnefa/Android-Webview-Based-App-Template)  
-- ils94 for [FlyffUAndroid](https://github.com/ils94/FlyffUAndroid)
+FlyffDroid is **NOT** affiliated with Gala Lab Corp., Sniegu Technologies SAS or Flyff Universe.
