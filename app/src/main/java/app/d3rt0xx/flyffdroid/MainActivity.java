@@ -119,9 +119,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.news:
                 loadSecondClientWithUrl(Websites.NEWS);
                 break;
-            case R.id.marketplace:
-                loadSecondClientWithUrl(Websites.MARKETPLACE);
-                break;
             case R.id.flyffipedia:
                 loadSecondClientWithUrl(Websites.FLYFFIPEDIA);
                 break;
@@ -133,6 +130,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.madrigalmaps:
                 loadSecondClientWithUrl(Websites.MADRIGALMAPS);
+                break;
+            case R.id.marketplace:
+                loadSecondClientWithUrl(Websites.MARKETPLACE);
                 break;
             case R.id.flyffdroid:
                 loadSecondClientWithUrl(Websites.FLYFFDROID);
