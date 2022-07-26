@@ -4,6 +4,7 @@ public enum Websites {
 
     GAME("https://universe.flyff.com/play"),
     NEWS("https://universe.flyff.com/news"),
+    MARKETPLACE("https://flyffutools.com/marketplace"),
     FLYFFIPEDIA("https://flyffipedia.com"),
     FLYFFULATOR("https://flyffulator.com"),
     SKILLULATOR("https://skillulator.com"),
