@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
         isOpen = true;
     }
 
-    private void changeClientWindowVisibility(FrameLayout frame, int visibilty, int titleItem, String titleText, int elementId, boolean isEnabled) {
+    private void changeClientWindowVisibility(FrameLayout frame, int visibility, int titleItem, String titleText, int elementId, boolean isEnabled) {
         frame.setVisibility(visibility);
 
         optionMenu.findItem(titleItem).setTitle(titleText);
