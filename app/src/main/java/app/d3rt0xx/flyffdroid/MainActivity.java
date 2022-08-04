@@ -333,7 +333,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @SuppressLint({"SetJavaScriptEnabled", "ClickableViewAccessibility"})
+    @SuppressLint({"SetJavaScriptEnabled", "ClickableViewAccessibility", "SdCardPath"})
     private void createWebViewer(WebView webView, FrameLayout frameLayout) {
 
         webView.setLayoutParams(new ViewGroup.LayoutParams(
@@ -361,6 +361,10 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptCanOpenWindowsAutomatically(false);
         webSettings.setUseWideViewPort(true);
         webSettings.setLoadWithOverviewMode(true);
+        webSettings.setAppCachePath(getFilesDir() + getPackageName() + "/cache");
+        webSettings.setAllowFileAccess(true);
+        webSettings.setAppCacheEnabled(true);
+        webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
         webSettings.setUserAgentString(getResources().getString(R.string.app_name));
 
         webView.loadUrl(Websites.GAME.getUrl());
