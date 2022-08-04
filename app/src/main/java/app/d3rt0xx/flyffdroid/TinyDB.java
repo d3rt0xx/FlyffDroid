@@ -43,8 +43,8 @@ import java.util.Map;
 
 public class TinyDB {
 
-    private Context context;
-    private SharedPreferences preferences;
+    private final Context context;
+    private final SharedPreferences preferences;
     private String DEFAULT_APP_IMAGEDATA_DIRECTORY;
     private String lastImagePath = "";
 
@@ -615,11 +615,7 @@ public class TinyDB {
      */
     public boolean objectExists(String key) {
         String gottenString = getString(key);
-        if (gottenString.isEmpty()) {
-            return false;
-        } else {
-            return true;
-        }
+        return !gottenString.isEmpty();
 
     }
 
