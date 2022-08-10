@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.droidev.flyffuwebviewclient", appContext.getPackageName());
+        assertEquals("app.d3rt0xx.flyffdroid", appContext.getPackageName());
     }
 }
