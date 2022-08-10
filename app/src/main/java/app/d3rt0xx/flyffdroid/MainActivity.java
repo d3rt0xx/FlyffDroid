@@ -1,9 +1,5 @@
 package app.d3rt0xx.flyffdroid;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
@@ -22,9 +18,11 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import java.util.Objects;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
-import app.d3rt0xx.flyffdroid.constants.Websites;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -74,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         if (exit) {
             finish();
         } else {
-            Toast.makeText(this, "Press Back again to Exit",
+            Toast.makeText(this, this.getString(R.string.press_back_again_to_exit),
                     Toast.LENGTH_SHORT).show();
             exit = true;
             fullScreenOff();
@@ -116,8 +114,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.rotation:
                 lockUnlockRotation();
                 break;
-            case R.id.news:
-                loadSecondClientWithUrl(Websites.NEWS);
+            case R.id.discord:
+                loadSecondClientWithUrl(Websites.DISCORD);
+                break;
+            case R.id.flyffdroid:
+                loadSecondClientWithUrl(Websites.FLYFFDROID);
                 break;
             case R.id.flyffipedia:
                 loadSecondClientWithUrl(Websites.FLYFFIPEDIA);
@@ -125,8 +126,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.flyffulator:
                 loadSecondClientWithUrl(Websites.FLYFFULATOR);
                 break;
-            case R.id.skillulator:
-                loadSecondClientWithUrl(Websites.SKILLULATOR);
+            case R.id.guildulator:
+                loadSecondClientWithUrl(Websites.GUILDULATOR);
                 break;
             case R.id.madrigalmaps:
                 loadSecondClientWithUrl(Websites.MADRIGALMAPS);
@@ -134,8 +135,17 @@ public class MainActivity extends AppCompatActivity {
             case R.id.marketplace:
                 loadSecondClientWithUrl(Websites.MARKETPLACE);
                 break;
-            case R.id.flyffdroid:
-                loadSecondClientWithUrl(Websites.FLYFFDROID);
+            case R.id.modelviewer:
+                loadSecondClientWithUrl(Websites.MODELVIEWER);
+                break;
+            case R.id.partnerfinder:
+                loadSecondClientWithUrl(Websites.PARTNERFINDER);
+                break;
+            case R.id.patchnotes:
+                loadSecondClientWithUrl(Websites.PATCHNOTES);
+                break;
+            case R.id.skillulator:
+                loadSecondClientWithUrl(Websites.SKILLULATOR);
                 break;
 
         }
@@ -159,9 +169,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void loadSecondClientWithUrl(Websites flyffipedia) {
+    private void loadSecondClientWithUrl(Websites flyffdroid) {
         toggleSecondClient();
-        sClientWebView.loadUrl(flyffipedia.getUrl());
+        sClientWebView.loadUrl(flyffdroid.getUrl());
     }
 
     private void closeSecondClient() {
