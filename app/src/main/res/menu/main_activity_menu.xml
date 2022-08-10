@@ -4,26 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <item
-        android:title="Client"
+        android:title="@string/client"
         tools:ignore="HardcodedText">
 
         <menu>
 
             <item
                 android:id="@+id/secondClient"
-                android:title="Open Second Client"
+                android:title="@string/open_second_client"
                 tools:ignore="HardcodedText" />
 
             <item
                 android:id="@+id/minimizeSecondClient"
                 android:enabled="false"
-                android:title="Minimize Second Client"
+                android:title="@string/minimize_second_client"
                 tools:ignore="HardcodedText" />
 
             <item
                 android:id="@+id/minimizeMainClient"
                 android:enabled="false"
-                android:title="Minimize Main Client"
+                android:title="@string/minimize_main_client"
                 tools:ignore="HardcodedText" />
 
         </menu>
@@ -31,20 +31,20 @@
     </item>
 
     <item
-        android:title="Reload"
+        android:title="@string/reload"
         tools:ignore="HardcodedText">
 
         <menu>
 
             <item
                 android:id="@+id/reloadMainClient"
-                android:title="Main Client"
+                android:title="@string/reload_main_client"
                 tools:ignore="HardcodedText" />
 
             <item
                 android:id="@+id/reloadSecondClient"
                 android:enabled="false"
-                android:title="Second Client"
+                android:title="@string/reload_second_client"
                 tools:ignore="HardcodedText" />
 
         </menu>
@@ -52,24 +52,10 @@
     </item>
 
     <item
-        android:id="@+id/fullScreen"
-        android:title="Fullscreen"
-        tools:ignore="HardcodedText" />
-
-    <item
-        android:id="@+id/rotation"
-        android:title="Lock Auto-Rotation" />
-
-    <item
-        android:title="Tools"
+        android:title="@string/community_tools"
         tools:ignore="HardcodedText">
 
         <menu>
-
-            <item
-                android:id="@+id/news"
-                android:title="Patch Notes"
-                tools:ignore="HardcodedText" />
 
             <item
                 android:id="@+id/flyffipedia"
@@ -82,8 +68,8 @@
                 tools:ignore="HardcodedText" />
 
             <item
-                android:id="@+id/skillulator"
-                android:title="Skillulator"
+                android:id="@+id/guildulator"
+                android:title="Guildulator"
                 tools:ignore="HardcodedText" />
 
             <item
@@ -97,12 +83,57 @@
                 tools:ignore="HardcodedText" />
 
             <item
-                android:id="@+id/flyffdroid"
-                android:title="FlyffDroid"
+                android:id="@+id/modelviewer"
+                android:title="Model Viewer"
+                tools:ignore="HardcodedText" />
+
+            <item
+                android:id="@+id/partnerfinder"
+                android:title="Partner Finder"
+                tools:ignore="HardcodedText" />
+
+            <item
+                android:id="@+id/skillulator"
+                android:title="Skillulator"
                 tools:ignore="HardcodedText" />
 
         </menu>
 
     </item>
+
+    <item
+        android:title="@string/other_links"
+        tools:ignore="HardcodedText">
+
+        <menu>
+
+            <item
+                android:id="@+id/discord"
+                android:title="Discord"
+                tools:ignore="HardcodedText" />
+
+            <item
+                android:id="@+id/flyffdroid"
+                android:title="FlyffDroid"
+                tools:ignore="HardcodedText" />
+
+            <item
+                android:id="@+id/patchnotes"
+                android:title="Patch Notes"
+                tools:ignore="HardcodedText" />
+
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/rotation"
+        android:title="@string/lock_auto_rotation"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/fullScreen"
+        android:title="@string/fullscreen"
+        tools:ignore="HardcodedText" />
 
 </menu>
