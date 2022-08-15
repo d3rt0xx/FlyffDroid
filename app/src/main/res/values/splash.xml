@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.FlyffDroid.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/teal1</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.FlyffDroid</item>
+    </style>
+</resources>
