@@ -1,0 +1,13 @@
+- name: Android Apk CI
+  # You may pin to the exact commit or the version.
+  # uses: yuanjinsongquyi/action_android_build@8aed3b1905e4610e1d4f2140da8561b78f3a7945
+  uses: yuanjinsongquyi/action_android_build@v1
+  with:
+    # Github secret token to allow automated publishing of APK to release.
+    GITHUB_TOKEN: # optional
+    # 蒲公英平台的token
+    CI_TOKEN: # optional
+    # app打包后的名字
+    APP_NAME: # optional
+    # 打包的种类
+    TYPEPACKAGE: # optional
