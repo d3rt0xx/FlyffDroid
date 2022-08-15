@@ -21,23 +21,23 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.splashscreen.SplashScreen;
 
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
+    String rotationlock = "unlocked";
+    Menu optionMenu;
     private WebView mClientWebView, sClientWebView;
     private FrameLayout mClient, sClient;
     private LinearLayout linearLayout;
     private Boolean exit = false, isOpen = false;
     private TinyDB tinyDB;
 
-    String rotationlock = "unlocked";
-
-    Menu optionMenu;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
