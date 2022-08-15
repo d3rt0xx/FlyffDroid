@@ -53,6 +53,26 @@ public class TinyDB {
         context = appContext;
     }
 
+    /**
+     * Check if external storage is writable or not
+     *
+     * @return true if writable, false otherwise
+     */
+    public static boolean isExternalStorageWritable() {
+        return Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState());
+    }
+
+    /**
+     * Check if external storage is readable or not
+     *
+     * @return true if readable, false otherwise
+     */
+    public static boolean isExternalStorageReadable() {
+        String state = Environment.getExternalStorageState();
+
+        return Environment.MEDIA_MOUNTED.equals(state) ||
+                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state);
+    }
 
     /**
      * Decodes the Bitmap from 'path' and returns it
@@ -73,7 +93,6 @@ public class TinyDB {
         return bitmapFromPath;
     }
 
-
     /**
      * Returns the String path of the last saved image
      *
@@ -82,7 +101,6 @@ public class TinyDB {
     public String getSavedImagePath() {
         return lastImagePath;
     }
-
 
     /**
      * Saves 'theBitmap' into folder 'theFolder' with the name 'theImageName'
@@ -107,7 +125,6 @@ public class TinyDB {
         return mFullPath;
     }
 
-
     /**
      * Saves 'theBitmap' into 'fullPath'
      *
@@ -118,6 +135,8 @@ public class TinyDB {
     public boolean putImageWithFullPath(String fullPath, Bitmap theBitmap) {
         return !(fullPath == null || theBitmap == null) && saveBitmap(fullPath, theBitmap);
     }
+
+    // Getters
 
     /**
      * Creates the path for the image with name 'imageName' in DEFAULT_APP.. directory
@@ -191,8 +210,6 @@ public class TinyDB {
 
         return (fileCreated && bitmapCompressed && streamClosed);
     }
-
-    // Getters
 
     /**
      * Get int value from SharedPreferences at 'key'. If key not found, return 0
@@ -344,31 +361,29 @@ public class TinyDB {
     }
 
 
-    public ArrayList<Object> getListObject(String key, Class<?> mClass){
-    	Gson gson = new Gson();
+    // Put methods
 
-    	ArrayList<String> objStrings = getListString(key);
-    	ArrayList<Object> objects =  new ArrayList<Object>();
+    public ArrayList<Object> getListObject(String key, Class<?> mClass) {
+        Gson gson = new Gson();
 
-    	for(String jObjString : objStrings){
-    		Object value  = gson.fromJson(jObjString,  mClass);
-    		objects.add(value);
-    	}
-    	return objects;
+        ArrayList<String> objStrings = getListString(key);
+        ArrayList<Object> objects = new ArrayList<Object>();
+
+        for (String jObjString : objStrings) {
+            Object value = gson.fromJson(jObjString, mClass);
+            objects.add(value);
+        }
+        return objects;
     }
 
-
-    public <T> T getObject(String key, Class<T> classOfT){
+    public <T> T getObject(String key, Class<T> classOfT) {
 
         String json = getString(key);
         Object value = new Gson().fromJson(json, classOfT);
         if (value == null)
             throw new NullPointerException();
-        return (T)value;
+        return (T) value;
     }
-
-
-    // Put methods
 
     /**
      * Put int value into SharedPreferences with 'key' and save
@@ -508,23 +523,24 @@ public class TinyDB {
 
     /**
      * Put ObJect any type into SharedPrefrences with 'key' and save
+     *
      * @param key SharedPreferences key
      * @param obj is the Object you want to put
      */
-    public void putObject(String key, Object obj){
-    	checkForNullKey(key);
-    	Gson gson = new Gson();
-    	putString(key, gson.toJson(obj));
+    public void putObject(String key, Object obj) {
+        checkForNullKey(key);
+        Gson gson = new Gson();
+        putString(key, gson.toJson(obj));
     }
 
-    public void putListObject(String key, ArrayList<Object> objArray){
-    	checkForNullKey(key);
-    	Gson gson = new Gson();
-    	ArrayList<String> objStrings = new ArrayList<String>();
-    	for(Object obj : objArray){
-    		objStrings.add(gson.toJson(obj));
-    	}
-    	putListString(key, objStrings);
+    public void putListObject(String key, ArrayList<Object> objArray) {
+        checkForNullKey(key);
+        Gson gson = new Gson();
+        ArrayList<String> objStrings = new ArrayList<String>();
+        for (Object obj : objArray) {
+            objStrings.add(gson.toJson(obj));
+        }
+        putListString(key, objStrings);
     }
 
     /**
@@ -546,7 +562,6 @@ public class TinyDB {
         return new File(path).delete();
     }
 
-
     /**
      * Clear SharedPreferences (remove everything)
      */
@@ -562,7 +577,6 @@ public class TinyDB {
     public Map<String, ?> getAll() {
         return preferences.getAll();
     }
-
 
     /**
      * Register SharedPreferences change listener
@@ -584,28 +598,6 @@ public class TinyDB {
             SharedPreferences.OnSharedPreferenceChangeListener listener) {
 
         preferences.unregisterOnSharedPreferenceChangeListener(listener);
-    }
-
-
-    /**
-     * Check if external storage is writable or not
-     *
-     * @return true if writable, false otherwise
-     */
-    public static boolean isExternalStorageWritable() {
-        return Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState());
-    }
-
-    /**
-     * Check if external storage is readable or not
-     *
-     * @return true if readable, false otherwise
-     */
-    public static boolean isExternalStorageReadable() {
-        String state = Environment.getExternalStorageState();
-
-        return Environment.MEDIA_MOUNTED.equals(state) ||
-                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state);
     }
 
     /**
