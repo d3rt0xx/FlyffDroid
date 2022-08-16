@@ -117,6 +117,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.discord:
                 loadSecondClientWithUrl(Websites.DISCORD);
                 break;
+            case R.id.exptable:
+                loadSecondClientWithUrl(Websites.EXPTABLE);
+                break;
             case R.id.flyffdroid:
                 loadSecondClientWithUrl(Websites.FLYFFDROID);
                 break;
