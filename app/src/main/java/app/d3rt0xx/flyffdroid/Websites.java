@@ -3,10 +3,11 @@ package app.d3rt0xx.flyffdroid;
 public enum Websites {
 
     DISCORD("https://discord.gg/flyffuniverse"),
-    GAME("https://universe.flyff.com/play"),
+    EXPTABLE("https://www.flyff.me"),
     FLYFFDROID("https://github.com/d3rt0xx/FlyffDroid"),
     FLYFFIPEDIA("https://flyffipedia.com"),
     FLYFFULATOR("https://flyffulator.com"),
+    GAME("https://universe.flyff.com/play"),
     GUILDULATOR("https://guildulator.vercel.app"),
     MADRIGALMAPS("https://www.madrigalmaps.com"),
     MARKETPLACE("https://flyffutools.com/marketplace"),
