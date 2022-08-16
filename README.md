@@ -32,7 +32,6 @@ Built with Gradle*
 - [ ] Auto-Updater
 - [ ] Gesture controls (swipe between clients)
 - [ ] Multiple profiles
-- [ ] Built-in leveling guide
 - [ ] Translations for different languages
 
 
