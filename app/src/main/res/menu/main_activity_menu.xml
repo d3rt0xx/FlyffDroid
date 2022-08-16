@@ -58,6 +58,11 @@
         <menu>
 
             <item
+                android:id="@+id/exptable"
+                android:title="EXP-Table"
+                tools:ignore="HardcodedText" />
+
+            <item
                 android:id="@+id/flyffipedia"
                 android:title="Flyffipedia"
                 tools:ignore="HardcodedText" />
