@@ -16,6 +16,7 @@ Built with Gradle*
 - [x] Free from Ads and Analytics
 - [x] Legal ([Terms of Service](https://galalab.helpshift.com/a/flyff-universe/?s=tos-privacy-policy&f=terms-of-service&l=en&p=all) approved)
 - [x] Built-in community tools  
+---> [EXP-Table](https://flyff.me)  
 ---> [Flyffipedia](https://flyffipedia.com)  
 ---> [Flyffulator](https://flyffulator.com)  
 ---> [Guildulator](https://guildulator.vercel.app)  
