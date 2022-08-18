@@ -120,9 +120,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.exptable:
                 loadSecondClientWithUrl(Websites.EXPTABLE);
                 break;
-            case R.id.flyffdroid:
-                loadSecondClientWithUrl(Websites.FLYFFDROID);
-                break;
             case R.id.flyffipedia:
                 loadSecondClientWithUrl(Websites.FLYFFIPEDIA);
                 break;
@@ -149,6 +146,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.skillulator:
                 loadSecondClientWithUrl(Websites.SKILLULATOR);
+                break;
+            case R.id.update:
+                loadSecondClientWithUrl(Websites.UPDATE);
                 break;
 
         }
@@ -374,10 +374,10 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptCanOpenWindowsAutomatically(false);
         webSettings.setUseWideViewPort(true);
         webSettings.setLoadWithOverviewMode(true);
-        webSettings.setAppCachePath(getFilesDir() + getPackageName() + "/cache");
+        webSettings.setAppCachePath(getApplicationContext().getCacheDir().getAbsolutePath());
         webSettings.setAllowFileAccess(true);
         webSettings.setAppCacheEnabled(true);
-        webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
+        webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         webSettings.setUserAgentString(getResources().getString(R.string.app_name));
 
         webView.loadUrl(Websites.GAME.getUrl());
