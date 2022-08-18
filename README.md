@@ -31,7 +31,6 @@ Built with Gradle*
 
 - [ ] Auto-Updater
 - [ ] Gesture controls (swipe between clients)
-- [ ] Multiple profiles
 - [ ] Translations for different languages
 
 
