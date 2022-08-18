@@ -15,11 +15,11 @@
     <string name="maximize_second_client" translatable="true">Maximize Second Client</string>
     <string name="yes" translatable="true">Yes</string>
     <string name="no" translatable="true">No</string>
-    <string name="press_back_again_to_exit" translatable="true">Press Back again to exit FlyffDroid</string>
+    <string name="press_back_again_to_exit" translatable="true">Press Back again to exit</string>
     <string name="client" translatable="true">Client</string>
     <string name="reload" translatable="true">Reload</string>
-    <string name="reload_main_client" translatable="true">Reload Main Client</string>
-    <string name="reload_second_client" translatable="true">Reload Second Client</string>
-    <string name="community_tools" translatable="true">Community Tools</string>
+    <string name="reload_main_client" translatable="true">Main Client</string>
+    <string name="reload_second_client" translatable="true">Second Client</string>
+    <string name="community_tools" translatable="true">Community-Tools</string>
     <string name="other_links" translatable="true">Other Links</string>
 </resources>
