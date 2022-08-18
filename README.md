@@ -14,7 +14,7 @@ Built with Gradle*
 - [x] **Dual-Client support** (for FS or Leecher :wink:)
 - [x] Open-Source (safe & secure)
 - [x] Free from Ads and Analytics
-- [x] Legal ([Terms of Service](https://galalab.helpshift.com/a/flyff-universe/?s=tos-privacy-policy&f=terms-of-service&l=en&p=all) approved)
+- [x] Legal and Ban-free ([Terms of Service](https://galalab.helpshift.com/a/flyff-universe/?s=tos-privacy-policy&f=terms-of-service&l=en&p=all) approved)
 - [x] Built-in 'Community-Tools'  
 ---> [EXP-Table](https://flyff.me)  
 ---> [Flyffipedia](https://flyffipedia.com)  
