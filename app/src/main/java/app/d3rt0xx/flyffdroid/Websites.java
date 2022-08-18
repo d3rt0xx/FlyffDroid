@@ -4,7 +4,6 @@ public enum Websites {
 
     DISCORD("https://discord.gg/flyffuniverse"),
     EXPTABLE("https://www.flyff.me"),
-    FLYFFDROID("https://github.com/d3rt0xx/FlyffDroid"),
     FLYFFIPEDIA("https://flyffipedia.com"),
     FLYFFULATOR("https://flyffulator.com"),
     GAME("https://universe.flyff.com/play"),
@@ -14,7 +13,8 @@ public enum Websites {
     MODELVIEWER("https://flyffmodelviewer.com"),
     PARTNERFINDER("https://flyffuinfo.com/partner-finder"),
     PATCHNOTES("https://universe.flyff.com/news"),
-    SKILLULATOR("https://skillulator.com");
+    SKILLULATOR("https://skillulator.com"),
+    UPDATE("https://github.com/d3rt0xx/FlyffDroid/releases/latest");
 
     private final String url;
 
