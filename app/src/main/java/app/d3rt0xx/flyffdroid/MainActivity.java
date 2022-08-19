@@ -29,18 +29,21 @@ public class MainActivity extends AppCompatActivity {
 
     String rotationlock = "unlocked";
     Menu optionMenu;
-    private WebView mClientWebView, sClientWebView;
-    private FrameLayout mClient, sClient;
+    private WebView mClientWebView, tClientWebView;
+    private FrameLayout mClient, tClient;
     private LinearLayout linearLayout;
     private Boolean exit = false, isOpen = false;
     private TinyDB tinyDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
+        SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
+        Objects.requireNonNull(getSupportActionBar()).setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setLogo(R.mipmap.ic_launcher_clean);
         setContentView(R.layout.activity_main);
-
         tinyDB = new TinyDB(this);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -52,18 +55,18 @@ public class MainActivity extends AppCompatActivity {
 
         mClient = findViewById(R.id.frameLayoutMainClient);
 
-        sClient = findViewById(R.id.frameLayoutSecondClient);
+        tClient = findViewById(R.id.frameLayoutTwinkClient);
 
         mClientWebView = new WebView(getApplicationContext());
 
-        sClientWebView = new WebView(getApplicationContext());
+        tClientWebView = new WebView(getApplicationContext());
 
         mainClient();
 
         if (savedInstanceState == null) {
             String gameStage = Websites.GAME.getUrl();
             mClientWebView.loadUrl(gameStage);
-            sClientWebView.loadUrl(gameStage);
+            tClientWebView.loadUrl(gameStage);
         }
     }
 
@@ -84,29 +87,29 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         mClient.removeAllViews();
-        sClient.removeAllViews();
+        tClient.removeAllViews();
         mClientWebView.destroy();
-        sClientWebView.destroy();
+        tClientWebView.destroy();
     }
 
     @SuppressLint("NonConstantResourceId")
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.secondClient:
-                toggleSecondClient();
+            case R.id.twinkClient:
+                toggleTwinkClient();
                 break;
-            case R.id.minimizeSecondClient:
-                minimizeWindow(sClient, R.id.minimizeSecondClient, getResources().getString(R.string.maximize_second_client), R.id.minimizeMainClient, getResources().getString(R.string.minimize_second_client));
+            case R.id.minimizeTwinkClient:
+                minimizeWindow(tClient, R.id.minimizeTwinkClient, getResources().getString(R.string.maximize_twink_client), R.id.minimizeMainClient, getResources().getString(R.string.minimize_twink_client));
                 break;
             case R.id.minimizeMainClient:
-                minimizeWindow(mClient, R.id.minimizeMainClient, getResources().getString(R.string.maximize_main_client), R.id.minimizeSecondClient, getResources().getString(R.string.minimize_main_client));
+                minimizeWindow(mClient, R.id.minimizeMainClient, getResources().getString(R.string.maximize_main_client), R.id.minimizeTwinkClient, getResources().getString(R.string.minimize_main_client));
                 break;
             case R.id.reloadMainClient:
                 mClientWebView.loadUrl(Websites.GAME.getUrl());
                 break;
-            case R.id.reloadSecondClient:
-                sClientWebView.loadUrl(Websites.GAME.getUrl());
+            case R.id.reloadTwinkClient:
+                tClientWebView.loadUrl(Websites.GAME.getUrl());
                 break;
             case R.id.fullScreen:
                 fullScreenOn();
@@ -115,51 +118,57 @@ public class MainActivity extends AppCompatActivity {
                 lockUnlockRotation();
                 break;
             case R.id.discord:
-                loadSecondClientWithUrl(Websites.DISCORD);
+                loadTwinkClientWithUrl(Websites.DISCORD);
                 break;
             case R.id.exptable:
-                loadSecondClientWithUrl(Websites.EXPTABLE);
+                loadTwinkClientWithUrl(Websites.EXPTABLE);
+                break;
+            case R.id.facebook:
+                loadTwinkClientWithUrl(Websites.FACEBOOK);
                 break;
             case R.id.flyffipedia:
-                loadSecondClientWithUrl(Websites.FLYFFIPEDIA);
+                loadTwinkClientWithUrl(Websites.FLYFFIPEDIA);
                 break;
             case R.id.flyffulator:
-                loadSecondClientWithUrl(Websites.FLYFFULATOR);
+                loadTwinkClientWithUrl(Websites.FLYFFULATOR);
                 break;
             case R.id.guildulator:
-                loadSecondClientWithUrl(Websites.GUILDULATOR);
+                loadTwinkClientWithUrl(Websites.GUILDULATOR);
                 break;
             case R.id.madrigalmaps:
-                loadSecondClientWithUrl(Websites.MADRIGALMAPS);
+                loadTwinkClientWithUrl(Websites.MADRIGALMAPS);
                 break;
             case R.id.marketplace:
-                loadSecondClientWithUrl(Websites.MARKETPLACE);
+                loadTwinkClientWithUrl(Websites.MARKETPLACE);
                 break;
             case R.id.modelviewer:
-                loadSecondClientWithUrl(Websites.MODELVIEWER);
+                loadTwinkClientWithUrl(Websites.MODELVIEWER);
                 break;
             case R.id.partnerfinder:
-                loadSecondClientWithUrl(Websites.PARTNERFINDER);
+                loadTwinkClientWithUrl(Websites.PARTNERFINDER);
                 break;
             case R.id.patchnotes:
-                loadSecondClientWithUrl(Websites.PATCHNOTES);
+                loadTwinkClientWithUrl(Websites.PATCHNOTES);
                 break;
             case R.id.skillulator:
-                loadSecondClientWithUrl(Websites.SKILLULATOR);
+                loadTwinkClientWithUrl(Websites.SKILLULATOR);
+                break;
+            case R.id.support:
+                loadTwinkClientWithUrl(Websites.SUPPORT);
                 break;
             case R.id.update:
-                loadSecondClientWithUrl(Websites.UPDATE);
+                loadTwinkClientWithUrl(Websites.UPDATE);
                 break;
 
         }
         return super.onOptionsItemSelected(item);
     }
 
-    private void toggleSecondClient() {
-        if (sClient.getVisibility() == View.GONE && !isOpen) {
-            changeSecondClientToVisible();
+    private void toggleTwinkClient() {
+        if (tClient.getVisibility() == View.GONE && !isOpen) {
+            changeTwinkClientToVisible();
         } else {
-            closeSecondClient();
+            closeTwinkClient();
         }
     }
 
@@ -172,15 +181,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void loadSecondClientWithUrl(Websites flyffdroid) {
-        toggleSecondClient();
-        sClientWebView.loadUrl(flyffdroid.getUrl());
+    private void loadTwinkClientWithUrl(Websites flyffdroid) {
+        toggleTwinkClient();
+        tClientWebView.loadUrl(flyffdroid.getUrl());
     }
 
-    private void closeSecondClient() {
+    private void closeTwinkClient() {
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setCancelable(false)
-                .setTitle(getResources().getString(R.string.close_second_client_question))
+                .setTitle(getResources().getString(R.string.close_twink_client_question))
                 .setPositiveButton(getResources().getString(R.string.yes), null)
                 .setNegativeButton(getResources().getString(R.string.no), null)
                 .show();
@@ -189,23 +198,23 @@ public class MainActivity extends AppCompatActivity {
 
         positiveButton.setOnClickListener(v -> {
 
-            sClient.removeAllViews();
+            tClient.removeAllViews();
 
-            sClientWebView.loadUrl("about:blank");
+            tClientWebView.loadUrl("about:blank");
 
-            sClient.setVisibility(View.GONE);
+            tClient.setVisibility(View.GONE);
 
-            optionMenu.findItem(R.id.secondClient).setTitle(getResources().getString(R.string.open_second_client));
+            optionMenu.findItem(R.id.twinkClient).setTitle(getResources().getString(R.string.open_twink_client));
 
-            optionMenu.findItem(R.id.minimizeSecondClient).setTitle(getResources().getString(R.string.minimize_second_client));
+            optionMenu.findItem(R.id.minimizeTwinkClient).setTitle(getResources().getString(R.string.minimize_twink_client));
 
             optionMenu.findItem(R.id.minimizeMainClient).setTitle(getResources().getString(R.string.minimize_main_client));
 
-            optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(false);
+            optionMenu.findItem(R.id.minimizeTwinkClient).setEnabled(false);
 
             optionMenu.findItem(R.id.minimizeMainClient).setEnabled(false);
 
-            optionMenu.findItem(R.id.reloadSecondClient).setEnabled(false);
+            optionMenu.findItem(R.id.reloadTwinkClient).setEnabled(false);
 
             if (mClient.getVisibility() == View.GONE) {
 
@@ -218,18 +227,18 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void changeSecondClientToVisible() {
-        sClient.setVisibility(View.VISIBLE);
+    private void changeTwinkClientToVisible() {
+        tClient.setVisibility(View.VISIBLE);
 
-        secondClient();
+        twinkClient();
 
-        optionMenu.findItem(R.id.secondClient).setTitle(getResources().getString(R.string.close_second_client));
+        optionMenu.findItem(R.id.twinkClient).setTitle(getResources().getString(R.string.close_twink_client));
 
-        optionMenu.findItem(R.id.minimizeSecondClient).setEnabled(true);
+        optionMenu.findItem(R.id.minimizeTwinkClient).setEnabled(true);
 
         optionMenu.findItem(R.id.minimizeMainClient).setEnabled(true);
 
-        optionMenu.findItem(R.id.reloadSecondClient).setEnabled(true);
+        optionMenu.findItem(R.id.reloadTwinkClient).setEnabled(true);
 
         isOpen = true;
     }
@@ -242,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
         optionMenu.findItem(elementId).setEnabled(isEnabled);
     }
 
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
         getMenuInflater().inflate(R.menu.main_activity_menu, menu);
 
         optionMenu = menu;
@@ -277,9 +286,9 @@ public class MainActivity extends AppCompatActivity {
         createWebViewer(mClientWebView, mClient);
     }
 
-    private void secondClient() {
+    private void twinkClient() {
 
-        createWebViewer(sClientWebView, sClient);
+        createWebViewer(tClientWebView, tClient);
     }
 
     private void lockUnlockRotation() {
@@ -387,14 +396,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         mClientWebView.saveState(outState);
-        sClientWebView.saveState(outState);
+        tClientWebView.saveState(outState);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         mClientWebView.restoreState(savedInstanceState);
-        sClientWebView.saveState(savedInstanceState);
+        tClientWebView.saveState(savedInstanceState);
     }
 
     @Override
