@@ -37,8 +37,8 @@ Built with Gradle*
 ## # ToDo's
 
 - [ ] Gesture controls
-- [ ] Translations
 - [ ] Auto-Updater
+- [ ] Translations
 
 
 ## # Screenshots - Single-Client & Dual-Client
