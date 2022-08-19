@@ -20,7 +20,7 @@ Built with Gradle*
 - [X] Native Android app (no browser shortcut)
 - [x] **Dual-Client support** (for FS or Leecher :wink:)
 - [x] Open-Source (safe & secure)
-- [x] Free from Ads and Analytics
+- [x] Free from Ads & Analytics
 - [x] Ban-free ([Terms of Service](https://galalab.helpshift.com/a/flyff-universe/?s=tos-privacy-policy&f=terms-of-service&l=en&p=all) approved)
 - [x] Built-in 'Community-Tools'  
 ---> [EXP Table](https://flyff.me)  
@@ -37,11 +37,11 @@ Built with Gradle*
 ## # ToDo's
 
 - [ ] Auto-Updater
-- [ ] Gesture controls (swipe between clients)
-- [ ] Translations for different languages
+- [ ] Translations
+- [ ] Gesture controls
 
 
-## # Screenshots - Single-Client / Dual-Client
+## # Screenshots - Single-Client & Dual-Client
 
 ![Screenshot](https://imguploader.de/images/2022/06/28/single.png)  
 ![Screenshot](https://imguploader.de/images/2022/06/28/multi.png)
