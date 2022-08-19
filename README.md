@@ -9,7 +9,7 @@ Built with Gradle*
 
 ## # Download
 
-[**Download**](https://github.com/d3rt0xx/FlyffDroid/releases/download/1.1.0/FlyffDroid_1.1.0.apk) latest release  
+[**Download**](https://github.com/d3rt0xx/FlyffDroid/releases/download/1.1.1/FlyffDroid_1.1.1.apk) latest release  
 
 *Allow installation of apps from unknown sources in your Android settings.*
 
