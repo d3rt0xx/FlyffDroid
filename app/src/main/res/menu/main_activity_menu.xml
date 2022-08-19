@@ -4,62 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <item
-        android:title="@string/client"
-        tools:ignore="HardcodedText">
+        android:id="@+id/fullScreen"
+        android:icon="@drawable/fullscreen"
+        tools:ignore="MenuTitle"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:title="@string/client">
 
         <menu>
 
             <item
-                android:id="@+id/secondClient"
-                android:title="@string/open_second_client"
-                tools:ignore="HardcodedText" />
+                android:id="@+id/twinkClient"
+                android:title="@string/open_twink_client"/>
 
             <item
-                android:id="@+id/minimizeSecondClient"
+                android:id="@+id/minimizeTwinkClient"
                 android:enabled="false"
-                android:title="@string/minimize_second_client"
-                tools:ignore="HardcodedText" />
+                android:title="@string/minimize_twink_client"/>
 
             <item
                 android:id="@+id/minimizeMainClient"
                 android:enabled="false"
-                android:title="@string/minimize_main_client"
-                tools:ignore="HardcodedText" />
+                android:title="@string/minimize_main_client"/>
 
         </menu>
 
     </item>
 
     <item
-        android:title="@string/reload"
-        tools:ignore="HardcodedText">
+        android:title="@string/reload">
 
         <menu>
 
             <item
                 android:id="@+id/reloadMainClient"
-                android:title="@string/reload_main_client"
-                tools:ignore="HardcodedText" />
+                android:title="@string/reload_main_client"/>
 
             <item
-                android:id="@+id/reloadSecondClient"
+                android:id="@+id/reloadTwinkClient"
                 android:enabled="false"
-                android:title="@string/reload_second_client"
-                tools:ignore="HardcodedText" />
+                android:title="@string/reload_twink_client"/>
 
         </menu>
 
     </item>
 
     <item
-        android:title="@string/community_tools"
-        tools:ignore="HardcodedText">
+        android:title="@string/community_tools">
 
         <menu>
 
             <item
                 android:id="@+id/exptable"
-                android:title="EXP-Table"
+                android:title="EXP Table"
                 tools:ignore="HardcodedText" />
 
             <item
@@ -107,8 +105,7 @@
     </item>
 
     <item
-        android:title="@string/other_links"
-        tools:ignore="HardcodedText">
+        android:title="@string/other_links">
 
         <menu>
 
@@ -118,13 +115,23 @@
                 tools:ignore="HardcodedText" />
 
             <item
+                android:id="@+id/facebook"
+                android:title="Facebook"
+                tools:ignore="HardcodedText" />
+
+            <item
                 android:id="@+id/patchnotes"
                 android:title="Patch Notes"
                 tools:ignore="HardcodedText" />
 
             <item
+                android:id="@+id/support"
+                android:title="Support"
+                tools:ignore="HardcodedText" />
+
+            <item
                 android:id="@+id/update"
-                android:title="Update (1.1.0)"
+                android:title="Update (1.1.1)"
                 tools:ignore="HardcodedText" />
 
         </menu>
@@ -133,12 +140,6 @@
 
     <item
         android:id="@+id/rotation"
-        android:title="@string/lock_auto_rotation"
-        tools:ignore="HardcodedText" />
-
-    <item
-        android:id="@+id/fullScreen"
-        android:title="@string/fullscreen"
-        tools:ignore="HardcodedText" />
+        android:title="@string/lock_auto_rotation" />
 
 </menu>
