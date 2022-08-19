@@ -7,16 +7,23 @@ Created with Android Studio
 Built with Gradle*
 
 
+## # Download
+
+[**Download**](https://github.com/d3rt0xx/FlyffDroid/releases/download/1.1.0/FlyffDroid_1.1.0.apk) latest release  
+
+*Allow installation of apps from unknown sources in your Android settings.*
+
+
 ## # Features
 
-- [x] Lightweight (less RAM usage)
+- [x] Lightweight (less CPU & RAM usage)
 - [X] Native Android app (no browser shortcut)
 - [x] **Dual-Client support** (for FS or Leecher :wink:)
 - [x] Open-Source (safe & secure)
 - [x] Free from Ads and Analytics
-- [x] Legal and Ban-free ([Terms of Service](https://galalab.helpshift.com/a/flyff-universe/?s=tos-privacy-policy&f=terms-of-service&l=en&p=all) approved)
+- [x] Ban-free ([Terms of Service](https://galalab.helpshift.com/a/flyff-universe/?s=tos-privacy-policy&f=terms-of-service&l=en&p=all) approved)
 - [x] Built-in 'Community-Tools'  
----> [EXP-Table](https://flyff.me)  
+---> [EXP Table](https://flyff.me)  
 ---> [Flyffipedia](https://flyffipedia.com)  
 ---> [Flyffulator](https://flyffulator.com)  
 ---> [Guildulator](https://guildulator.vercel.app)  
