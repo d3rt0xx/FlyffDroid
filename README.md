@@ -52,6 +52,11 @@ Built with Gradle*
 [![YouTube](https://imguploader.de/images/2022/06/28/video.png)](https://www.youtube.com/watch?v=bY8VQP32aOA)
 
 
+## # Credits
+
+FlyffDroid **heavily** based on [FlyffUAndroid](https://github.com/ils94/FlyffUAndroid) by [ils94](https://github.com/ils94) with code re-arrangement by [Stutenkerl](https://github.com/Stutenkerl)
+
+
 ## # Disclaimer
 
 FlyffDroid is **NOT** affiliated with Gala Lab Corp., Sniegu Technologies SAS or Flyff Universe.
