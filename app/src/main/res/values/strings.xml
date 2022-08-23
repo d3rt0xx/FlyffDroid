@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">FlyffDroid</string>
-    <string name="unlock_auto_rotation" translatable="true">Unlock Auto-Rotation</string>
-    <string name="lock_auto_rotation" translatable="true">Lock Auto-Rotation</string>
-    <string name="locked_auto_rotation" translatable="true">Locked Auto-Rotation</string>
-    <string name="unlocked_auto_rotation" translatable="true">Unlocked Auto-Rotation</string>
     <string name="open_twink_client" translatable="true">Open Twink-Client</string>
     <string name="close_twink_client" translatable="true">Close Twink-Client</string>
     <string name="close_twink_client_question" translatable="true">Close Twink-Client?</string>
@@ -14,7 +10,8 @@
     <string name="maximize_twink_client" translatable="true">Maximize Twink-Client</string>
     <string name="yes" translatable="true">Yes</string>
     <string name="no" translatable="true">No</string>
-    <string name="press_back_again_to_exit" translatable="true">Press Back again to exit</string>
+    <string name="press_back_again_to_exit" translatable="true">Press Back twice to exit FlyffDroid</string>
+    <string name="press_back_once_to_exit_fullscreen" translatable="true">Press Back once to exit Fullscreen</string>
     <string name="client" translatable="true">Client</string>
     <string name="reload" translatable="true">Reload</string>
     <string name="reload_main_client" translatable="true">Reload Main-Client</string>
