@@ -6,52 +6,49 @@
     <item
         android:id="@+id/fullScreen"
         android:icon="@drawable/fullscreen"
-        tools:ignore="MenuTitle"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom"
+        tools:ignore="MenuTitle" />
 
-    <item
-        android:title="@string/client">
+    <item android:title="@string/client">
 
         <menu>
 
             <item
                 android:id="@+id/twinkClient"
-                android:title="@string/open_twink_client"/>
+                android:title="@string/open_twink_client" />
 
             <item
                 android:id="@+id/minimizeTwinkClient"
                 android:enabled="false"
-                android:title="@string/minimize_twink_client"/>
+                android:title="@string/minimize_twink_client" />
 
             <item
                 android:id="@+id/minimizeMainClient"
                 android:enabled="false"
-                android:title="@string/minimize_main_client"/>
+                android:title="@string/minimize_main_client" />
 
         </menu>
 
     </item>
 
-    <item
-        android:title="@string/reload">
+    <item android:title="@string/reload">
 
         <menu>
 
             <item
                 android:id="@+id/reloadMainClient"
-                android:title="@string/reload_main_client"/>
+                android:title="@string/reload_main_client" />
 
             <item
                 android:id="@+id/reloadTwinkClient"
                 android:enabled="false"
-                android:title="@string/reload_twink_client"/>
+                android:title="@string/reload_twink_client" />
 
         </menu>
 
     </item>
 
-    <item
-        android:title="@string/community_tools">
+    <item android:title="@string/community_tools">
 
         <menu>
 
@@ -104,8 +101,7 @@
 
     </item>
 
-    <item
-        android:title="@string/other_links">
+    <item android:title="@string/other_links">
 
         <menu>
 
@@ -131,15 +127,11 @@
 
             <item
                 android:id="@+id/update"
-                android:title="Update (1.1.1)"
+                android:title="Update (1.1.2)"
                 tools:ignore="HardcodedText" />
 
         </menu>
 
     </item>
-
-    <item
-        android:id="@+id/rotation"
-        android:title="@string/lock_auto_rotation" />
 
 </menu>
