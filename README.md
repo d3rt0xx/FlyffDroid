@@ -42,8 +42,8 @@ Built with Gradle*
 
 ## # Screenshots - Single-Client & Dual-Client
 
-![Screenshot](https://imguploader.de/images/2022/06/28/single.png)  
-![Screenshot](https://imguploader.de/images/2022/06/28/multi.png)
+![Screenshot](https://imguploader.de/images/2022/08/19/toolbar.png)  
+![Screenshot](https://imguploader.de/images/2022/08/23/switcher.png)
 
 
 ## # YouTube - Dual-Client Demo
