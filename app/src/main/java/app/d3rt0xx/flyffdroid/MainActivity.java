@@ -164,9 +164,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.madrigalmaps:
                 loadTwinkClientWithUrl(Websites.MADRIGALMAPS);
                 break;
-            case R.id.marketplace:
-                loadTwinkClientWithUrl(Websites.MARKETPLACE);
-                break;
             case R.id.modelviewer:
                 loadTwinkClientWithUrl(Websites.MODELVIEWER);
                 break;
@@ -347,9 +344,7 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptCanOpenWindowsAutomatically(false);
         webSettings.setUseWideViewPort(true);
         webSettings.setLoadWithOverviewMode(true);
-        webSettings.setAppCachePath(getApplicationContext().getCacheDir().getAbsolutePath());
         webSettings.setAllowFileAccess(true);
-        webSettings.setAppCacheEnabled(true);
         webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         webSettings.setUserAgentString(getResources().getString(R.string.app_name));
 
