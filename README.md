@@ -9,7 +9,7 @@ Built with Gradle*
 
 ## # Download
 
-[**Download**](https://github.com/d3rt0xx/FlyffDroid/releases/download/1.1.2/FlyffDroid_1.1.2.apk) latest release  
+[**Download**](https://github.com/d3rt0xx/FlyffDroid/releases/download/1.1.3/FlyffDroid_1.1.3.apk) latest release  
 
 *Allow installation of apps from unknown sources in your Android settings.*
 
@@ -28,7 +28,6 @@ Built with Gradle*
 ---> [Flyffulator](https://flyffulator.com)  
 ---> [Guildulator](https://guildulator.vercel.app)  
 ---> [Madrigal Maps](https://www.madrigalmaps.com)  
----> [Marketplace](https://flyffutools.com/marketplace)  
 ---> [Model Viewer](https://flyffmodelviewer.com)  
 ---> [Partner Finder](https://flyffuinfo.com/partner-finder)  
 ---> [Skillulator](https://skillulator.com)  
