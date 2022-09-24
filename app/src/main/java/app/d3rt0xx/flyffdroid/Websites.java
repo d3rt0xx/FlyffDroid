@@ -10,7 +10,6 @@ public enum Websites {
     GAME("https://universe.flyff.com/play"),
     GUILDULATOR("https://guildulator.vercel.app"),
     MADRIGALMAPS("https://www.madrigalmaps.com"),
-    MARKETPLACE("https://flyffutools.com/marketplace"),
     MODELVIEWER("https://flyffmodelviewer.com"),
     PARTNERFINDER("https://flyffuinfo.com/partner-finder"),
     PATCHNOTES("https://universe.flyff.com/news"),
