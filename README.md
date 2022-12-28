@@ -1,11 +1,45 @@
-# ![Logo](https://imguploader.de/images/2022/06/26/ic_launcher5acc11c4a97b1049.png) FlyffDroid
+<h1 align="center">
+  <br>
+  <a href="https://github.com/d3rt0xx/FlyffDroid">
+  <img src="https://imguploader.de/images/2022/06/26/ic_launcher5acc11c4a97b1049.png">
+  </a>
+  <br>
+  FlyffDroid
+  <br>
+</h1>
 
-**FlyffDroid** is a lightweight application to play Flyff Universe on Android with Dual-Client support.
+<p align="center">
+  <a href="https://github.com/d3rt0xx/FlyffDroid/releases/latest" target="_blank">
+  <img src="https://img.shields.io/github/release/d3rt0xx/FlyffDroid.svg?style=flat-square">
+  </a>
+  <a href="https://github.com/d3rt0xx/FlyffDroid/releases" target="_blank">
+  <img src="https://img.shields.io/github/downloads/d3rt0xx/FlyffDroid/total.svg?style=flat-square">
+  </a>
+  <a href="https://github.com/d3rt0xx/FlyffDroid/blob/main/LICENSE.md" target="_blank">
+  <img src="https://img.shields.io/github/license/d3rt0xx/FlyffDroid.svg?style=flat-square">
+  </a>
+  <a href="https://github.com/d3rt0xx/FlyffDroid/commits/main" target="_blank">
+  <img src="https://img.shields.io/github/last-commit/d3rt0xx/FlyffDroid.svg?style=flat-square&logo=github&logoColor=white">
+  </a>
+  <a href="https://github.com/d3rt0xx/FlyffDroid/issues" target="_blank">
+  <img src="https://img.shields.io/github/issues-raw/d3rt0xx/FlyffDroid.svg?style=flat-square&logo=github&logoColor=white">
+  </a>
+</p>
 
-*Written in Java  
-Created with Android Studio  
-Built with Gradle*
+<h4 align="center">
+  FlyffDroid is a lightweight application to play Flyff Universe on Android with Dual-Client support.
+</h4>
 
+<p align="center">
+  <i>Written in Java</i>
+  <br>
+  <i>Created with Android Studio</i>
+  <br>
+  <i>Built with Gradle</i>
+</p>
+
+<br>
+<br>
 
 ## # Download
 
