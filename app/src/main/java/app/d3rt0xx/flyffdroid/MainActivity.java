@@ -167,9 +167,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.modelviewer:
                 loadTwinkClientWithUrl(Websites.MODELVIEWER);
                 break;
-            case R.id.partnerfinder:
-                loadTwinkClientWithUrl(Websites.PARTNERFINDER);
-                break;
             case R.id.patchnotes:
                 loadTwinkClientWithUrl(Websites.PATCHNOTES);
                 break;
