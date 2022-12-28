@@ -10,19 +10,19 @@
 
 <p align="center">
   <a href="https://github.com/d3rt0xx/FlyffDroid/releases/latest">
-  <img src="https://img.shields.io/github/release/d3rt0xx/FlyffDroid.svg?label=Version&style=flat-square">
+  <img src="https://img.shields.io/github/v/release/d3rt0xx/FlyffDroid?label=Version&style=flat-square">
   </a>
   <a href="https://github.com/d3rt0xx/FlyffDroid/releases">
-  <img src="https://img.shields.io/github/downloads/d3rt0xx/FlyffDroid/total.svg?label=Downloads&style=flat-square">
+  <img src="https://img.shields.io/github/downloads/d3rt0xx/FlyffDroid/total?label=Downloads&style=flat-square">
   </a>
   <a href="https://github.com/d3rt0xx/FlyffDroid/blob/main/LICENSE.md">
-  <img src="https://img.shields.io/github/license/d3rt0xx/FlyffDroid.svg?label=License&style=flat-square">
+  <img src="https://img.shields.io/github/license/d3rt0xx/FlyffDroid?label=License&style=flat-square">
   </a>
   <a href="https://github.com/d3rt0xx/FlyffDroid/commits/main">
-  <img src="https://img.shields.io/github/last-commit/d3rt0xx/FlyffDroid.svg?label=Updated&style=flat-square&logo=github&logoColor=white">
+  <img src="https://img.shields.io/github/last-commit/d3rt0xx/FlyffDroid?label=Updated&logo=github&style=flat-square">
   </a>
   <a href="https://github.com/d3rt0xx/FlyffDroid/issues">
-  <img src="https://img.shields.io/github/issues-raw/d3rt0xx/FlyffDroid.svg?label=Issues&style=flat-square&logo=github&logoColor=white">
+  <img src="https://img.shields.io/github/issues-raw/d3rt0xx/FlyffDroid?label=Issues&logo=github&style=flat-square">
   </a>
 </p>
 
