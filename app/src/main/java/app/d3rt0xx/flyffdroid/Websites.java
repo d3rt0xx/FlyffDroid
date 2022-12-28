@@ -11,7 +11,6 @@ public enum Websites {
     GUILDULATOR("https://guildulator.vercel.app"),
     MADRIGALMAPS("https://www.madrigalmaps.com"),
     MODELVIEWER("https://flyffmodelviewer.com"),
-    PARTNERFINDER("https://flyffuinfo.com/partner-finder"),
     PATCHNOTES("https://universe.flyff.com/news"),
     SKILLULATOR("https://skillulator.com"),
     SUPPORT("https://galalab.helpshift.com/a/flyff-universe"),
