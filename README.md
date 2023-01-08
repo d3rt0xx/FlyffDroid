@@ -21,8 +21,11 @@
   <a href="https://github.com/d3rt0xx/FlyffDroid/commits/main">
   <img src="https://img.shields.io/github/last-commit/d3rt0xx/FlyffDroid?label=Updated&logo=github&style=flat-square">
   </a>
-  <a href="https://github.com/d3rt0xx/FlyffDroid/issues">
-  <img src="https://img.shields.io/github/issues-raw/d3rt0xx/FlyffDroid?label=Issues&logo=github&style=flat-square">
+  <a href="https://github.com/d3rt0xx/FlyffDroid/issues?q=is%3Aissue+is%3Aclosed">
+  <img src="https://img.shields.io/github/issues-closed/d3rt0xx/FlyffDroid?color=green&label=Issues&logo=github&style=flat-square">
+  </a>
+  <a href="https://github.com/d3rt0xx/FlyffDroid/issues?q=is%3Aopen+is%3Aissue">
+  <img src="https://img.shields.io/github/issues/d3rt0xx/FlyffDroid?label=Issues&logo=github&style=flat-square">
   </a>
 </p>
 
@@ -42,7 +45,7 @@
 
 ## # Download
 
-[**Download**](https://github.com/d3rt0xx/FlyffDroid/releases/download/1.1.4/FlyffDroid_1.1.4.apk) latest release  
+[**Download**](https://github.com/d3rt0xx/FlyffDroid/releases/download/1.1.5/FlyffDroid_1.1.5.apk) latest release  
 
 *Allow installation of apps from unknown sources in your Android settings.*
 
@@ -84,7 +87,7 @@
 
 ## # Credits
 
-FlyffDroid **heavily** based on [FlyffUAndroid](https://github.com/ils94/FlyffUAndroid) by [ils94](https://github.com/ils94) with code re-arrangement by [Stutenkerl](https://github.com/Stutenkerl)
+FlyffDroid is based on [FlyffUAndroid](https://github.com/ils94/FlyffUAndroid) by [ils94](https://github.com/ils94) with code re-arrangement by [Stutenkerl](https://github.com/Stutenkerl)
 
 
 ## # Disclaimer
