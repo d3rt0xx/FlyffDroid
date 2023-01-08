@@ -5,5 +5,9 @@
         <item name="colorPrimary">@color/teal</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowFullscreen">true</item>
     </style>
 </resources>
