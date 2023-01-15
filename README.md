@@ -18,6 +18,7 @@
   <a href="https://github.com/d3rt0xx/FlyffDroid/blob/main/LICENSE.md">
   <img src="https://img.shields.io/github/license/d3rt0xx/FlyffDroid?label=License&style=flat-square">
   </a>
+  <br>
   <a href="https://github.com/d3rt0xx/FlyffDroid/commits/main">
   <img src="https://img.shields.io/github/last-commit/d3rt0xx/FlyffDroid?label=Updated&logo=github&style=flat-square">
   </a>
