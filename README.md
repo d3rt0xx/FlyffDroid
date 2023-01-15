@@ -21,11 +21,11 @@
   <a href="https://github.com/d3rt0xx/FlyffDroid/commits/main">
   <img src="https://img.shields.io/github/last-commit/d3rt0xx/FlyffDroid?label=Updated&logo=github&style=flat-square">
   </a>
-  <a href="https://github.com/d3rt0xx/FlyffDroid/issues?q=is%3Aissue+is%3Aclosed">
-  <img src="https://img.shields.io/github/issues-closed/d3rt0xx/FlyffDroid?color=green&label=Issues&logo=github&style=flat-square">
-  </a>
   <a href="https://github.com/d3rt0xx/FlyffDroid/issues?q=is%3Aopen+is%3Aissue">
   <img src="https://img.shields.io/github/issues/d3rt0xx/FlyffDroid?color=yellow&label=Issues&logo=github&style=flat-square">
+  </a>
+  <a href="https://github.com/d3rt0xx/FlyffDroid/issues?q=is%3Aissue+is%3Aclosed">
+  <img src="https://img.shields.io/github/issues-closed/d3rt0xx/FlyffDroid?color=green&label=Issues&logo=github&style=flat-square">
   </a>
 </p>
 
