@@ -46,7 +46,7 @@
 
 ## # Download
 
-[**Download**](https://github.com/d3rt0xx/FlyffDroid/releases/download/1.1.5/FlyffDroid_1.1.5.apk) latest release  
+[**Download**](https://github.com/d3rt0xx/FlyffDroid/releases/download/1.1.6/FlyffDroid_1.1.6.apk) latest release  
 
 *Allow installation of apps from unknown sources in your Android settings.*
 
@@ -60,13 +60,12 @@
 - [x] Free from Ads & Analytics
 - [x] Ban-free ([Terms of Service](https://galalab.helpshift.com/a/flyff-universe/?s=tos-privacy-policy&f=terms-of-service&l=en&p=all) approved)
 - [x] Built-in 'Community-Tools'  
----> [EXP Table](https://flyff.me)  
 ---> [Flyffipedia](https://flyffipedia.com)  
 ---> [Flyffulator](https://flyffulator.com)  
 ---> [Guildulator](https://guildulator.vercel.app)  
 ---> [Madrigal Maps](https://www.madrigalmaps.com)  
 ---> [Model Viewer](https://flyffmodelviewer.com)  
----> [Skillulator](https://skillulator.com)  
+---> [Trainer](https://flyff.me)  
 
 
 ## # ToDo's
