@@ -53,11 +53,6 @@
         <menu>
 
             <item
-                android:id="@+id/exptable"
-                android:title="EXP Table"
-                tools:ignore="HardcodedText" />
-
-            <item
                 android:id="@+id/flyffipedia"
                 android:title="Flyffipedia"
                 tools:ignore="HardcodedText" />
@@ -83,8 +78,8 @@
                 tools:ignore="HardcodedText" />
 
             <item
-                android:id="@+id/skillulator"
-                android:title="Skillulator"
+                android:id="@+id/exptable"
+                android:title="Trainer"
                 tools:ignore="HardcodedText" />
 
         </menu>
@@ -117,7 +112,7 @@
 
             <item
                 android:id="@+id/update"
-                android:title="Update (1.1.5)"
+                android:title="Update (1.1.6)"
                 tools:ignore="HardcodedText" />
 
         </menu>
