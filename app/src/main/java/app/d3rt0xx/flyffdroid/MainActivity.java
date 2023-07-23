@@ -122,64 +122,43 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("NonConstantResourceId")
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()) {
-            case R.id.twinkClient:
-                toggleTwinkClient();
-                break;
-            case R.id.minimizeTwinkClient:
-                minimizeWindow(tClient, R.id.minimizeTwinkClient, getResources().getString(R.string.maximize_twink_client), R.id.minimizeMainClient, getResources().getString(R.string.minimize_twink_client));
-                break;
-            case R.id.minimizeMainClient:
-                minimizeWindow(mClient, R.id.minimizeMainClient, getResources().getString(R.string.maximize_main_client), R.id.minimizeTwinkClient, getResources().getString(R.string.minimize_main_client));
-                break;
-            case R.id.reloadMainClient:
-                mClientWebView.loadUrl(Websites.GAME.getUrl());
-                break;
-            case R.id.reloadTwinkClient:
-                tClientWebView.loadUrl(Websites.GAME.getUrl());
-                break;
-            case R.id.fullScreen:
-                fullScreenOn();
-                Toast.makeText(this, this.getString(R.string.press_back_once_to_exit_fullscreen),
-                        Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.discord:
-                loadTwinkClientWithUrl(Websites.DISCORD);
-                break;
-            case R.id.exptable:
-                loadTwinkClientWithUrl(Websites.EXPTABLE);
-                break;
-            case R.id.facebook:
-                loadTwinkClientWithUrl(Websites.FACEBOOK);
-                break;
-            case R.id.flyffipedia:
-                loadTwinkClientWithUrl(Websites.FLYFFIPEDIA);
-                break;
-            case R.id.flyffulator:
-                loadTwinkClientWithUrl(Websites.FLYFFULATOR);
-                break;
-            case R.id.guildulator:
-                loadTwinkClientWithUrl(Websites.GUILDULATOR);
-                break;
-            case R.id.madrigalmaps:
-                loadTwinkClientWithUrl(Websites.MADRIGALMAPS);
-                break;
-            case R.id.modelviewer:
-                loadTwinkClientWithUrl(Websites.MODELVIEWER);
-                break;
-            case R.id.patchnotes:
-                loadTwinkClientWithUrl(Websites.PATCHNOTES);
-                break;
-            case R.id.skillulator:
-                loadTwinkClientWithUrl(Websites.SKILLULATOR);
-                break;
-            case R.id.support:
-                loadTwinkClientWithUrl(Websites.SUPPORT);
-                break;
-            case R.id.update:
-                loadTwinkClientWithUrl(Websites.UPDATE);
-                break;
-
+        int itemId = item.getItemId();
+        if (itemId == R.id.twinkClient) {
+            toggleTwinkClient();
+        } else if (itemId == R.id.minimizeTwinkClient) {
+            minimizeWindow(tClient, R.id.minimizeTwinkClient, getResources().getString(R.string.maximize_twink_client), R.id.minimizeMainClient, getResources().getString(R.string.minimize_twink_client));
+        } else if (itemId == R.id.minimizeMainClient) {
+            minimizeWindow(mClient, R.id.minimizeMainClient, getResources().getString(R.string.maximize_main_client), R.id.minimizeTwinkClient, getResources().getString(R.string.minimize_main_client));
+        } else if (itemId == R.id.reloadMainClient) {
+            mClientWebView.loadUrl(Websites.GAME.getUrl());
+        } else if (itemId == R.id.reloadTwinkClient) {
+            tClientWebView.loadUrl(Websites.GAME.getUrl());
+        } else if (itemId == R.id.fullScreen) {
+            fullScreenOn();
+            Toast.makeText(this, this.getString(R.string.press_back_once_to_exit_fullscreen),
+                    Toast.LENGTH_SHORT).show();
+        } else if (itemId == R.id.discord) {
+            loadTwinkClientWithUrl(Websites.DISCORD);
+        } else if (itemId == R.id.exptable) {
+            loadTwinkClientWithUrl(Websites.EXPTABLE);
+        } else if (itemId == R.id.facebook) {
+            loadTwinkClientWithUrl(Websites.FACEBOOK);
+        } else if (itemId == R.id.flyffipedia) {
+            loadTwinkClientWithUrl(Websites.FLYFFIPEDIA);
+        } else if (itemId == R.id.flyffulator) {
+            loadTwinkClientWithUrl(Websites.FLYFFULATOR);
+        } else if (itemId == R.id.guildulator) {
+            loadTwinkClientWithUrl(Websites.GUILDULATOR);
+        } else if (itemId == R.id.madrigalmaps) {
+            loadTwinkClientWithUrl(Websites.MADRIGALMAPS);
+        } else if (itemId == R.id.modelviewer) {
+            loadTwinkClientWithUrl(Websites.MODELVIEWER);
+        } else if (itemId == R.id.patchnotes) {
+            loadTwinkClientWithUrl(Websites.PATCHNOTES);
+        } else if (itemId == R.id.support) {
+            loadTwinkClientWithUrl(Websites.SUPPORT);
+        } else if (itemId == R.id.update) {
+            loadTwinkClientWithUrl(Websites.UPDATE);
         }
         return super.onOptionsItemSelected(item);
     }
