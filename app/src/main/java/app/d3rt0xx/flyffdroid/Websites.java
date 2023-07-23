@@ -12,7 +12,6 @@ public enum Websites {
     MADRIGALMAPS("https://www.madrigalmaps.com"),
     MODELVIEWER("https://flyffmodelviewer.com"),
     PATCHNOTES("https://universe.flyff.com/news"),
-    SKILLULATOR("https://skillulator.com"),
     SUPPORT("https://galalab.helpshift.com/a/flyff-universe"),
     UPDATE("https://github.com/d3rt0xx/FlyffDroid/releases/latest");
 
