@@ -92,4 +92,4 @@ FlyffDroid is based on [FlyffUAndroid](https://github.com/ils94/FlyffUAndroid) b
 
 ## # Disclaimer
 
-FlyffDroid is **NOT** affiliated with Gala Lab Corp., Sniegu Technologies SAS or Flyff Universe.
+FlyffDroid is **NOT** affiliated with "Gala Lab Corp.", "Wemade Connect Co., Ltd.", "Sniegu Technologies SAS" or "Flyff Universe".
